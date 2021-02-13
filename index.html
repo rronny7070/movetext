@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movetext</title>
+    <style>
+        #test{
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = 'test'>test</h1>
+    <script>
+        let rl = 50
+        let tb = 50
+        setInterval(function() {
+            document.querySelector('#test').style.right = rl + '%'
+            document.querySelector('#test').style.top = tb + '%'
+        })
+        window.addEventListener('keydown',(event) =>{
+            if(event.key == 'a'){
+                rl = rl +1;
+            }
+            if(event.key == 'd'){
+                rl = rl - 1;
+            }
+            if(event.key == 'w'){
+                tb = tb - 2;
+            }
+            if(event.key == 's'){
+                tb = tb + 2;
+            }
+        })
+        
+    </script>
+</body>
+</html>
